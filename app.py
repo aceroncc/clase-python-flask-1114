@@ -20,3 +20,20 @@ if __name__ == "__main__":
     # `debug=True` sirve en desarrollo porque reinicia el servidor
     # cuando detecta cambios y muestra errores con mas detalle.
     app.run(debug=True)
+ 
+ # Nueva ruta 1
+@app.route("/index1")
+def about():
+    return render_template("index1.html")
+
+
+# Nueva ruta 2
+@app.route("/index2")
+def servicios():
+    return render_template("index2.html")
+
+
+# Nueva ruta 3
+@app.route("/index3")
+def contacto():
+    return render_template("index3.html")
