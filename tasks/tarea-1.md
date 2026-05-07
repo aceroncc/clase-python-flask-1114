@@ -24,13 +24,14 @@ Para instalar dependencias y ejecutar el proyecto, sigue el `README.md`.
 
 ## Preguntas de reflexion tecnica
 
-1. Que problema concreto resuelve el entorno virtual en un proyecto Python?
-2. Que diferencia hay entre instalar `Flask` globalmente y hacerlo dentro de `.venv`?
-3. Por que `requirements.txt` forma parte del proyecto y no de tu maquina personal?
-4. Cuando ejecutas `python app.py`, que archivo actua como punto de entrada y por que?
-5. Que relacion hay entre la ruta `/`, la funcion `inicio()` y el archivo `templates/index.html`?
-6. Que evidencia te da la terminal de que el servidor arranco correctamente?
-7. Si cambias el HTML y el navegador muestra otra cosa, que te demuestra eso sobre el flujo entre backend y frontend en este proyecto?
+
+
+   1. El Entorno Virtual (.venv)Problema que resuelve: El conflicto de versiones. Evita que las librerías de un proyecto interfieran con las de otro (Aislamiento).Diferencia de instalación: Al instalar dentro de .venv, las librerías son locales al proyecto. Si se hace de forma global, se ensucia el sistema operativo y se pierde el control sobre qué versión necesita cada aplicación.
+   2. Gestión de Dependencias (requirements.txt)Propósito: Es el "manual de instrucciones" del entorno. No pertenece a la máquina personal porque su función es la portabilidad: permite que cualquier desarrollador o servidor recree el entorno exacto usando el comando pip install -r requirements.txt.
+   3. El Flujo de Ejecución en FlaskPunto de Entrada (app.py): Es el archivo principal que inicializa el servidor. Al ejecutar python app.py, el programa mapea las URLs a funciones específicas.Mecánica de la Ruta:Ruta (/): La dirección que el usuario escribe en el navegador.Función (inicio()): La lógica de Python que se dispara cuando se accede a esa ruta.Plantilla (templates/index.html): El archivo visual que la función decide enviar como respuesta.
+   4. Verificación y DiagnósticoEvidencia de éxito: La terminal debe mostrar la dirección local http://127.0.0.1:5000. Esto indica que el servidor está en modo "escucha".Relación Backend-Frontend: Si al modificar el HTML el navegador cambia, se confirma que el Backend (Flask) está entregando correctamente los recursos actualizados al Frontend (Cliente/Navegador).
+   5. Buenas Prácticas y Errores ComunesError 404: Ocurre cuando se solicita una ruta que no ha sido definida en el código Python.Error "Address already in use": Significa que el puerto 5000 está bloqueado por otra ejecución; se debe cerrar el proceso anterior antes de reiniciar.Carpeta .venv: Nunca se comparte ni se sube a repositorios (se incluye en .gitignore), ya que es específica de la arquitectura de cada computadora.
+
 
 ## Entregable
 
