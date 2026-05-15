@@ -15,7 +15,7 @@ def inicio():
                            usuario=nombre_usuario,
                            temas=temas_vistos)
 
-@app.route('/   ')
+@app.route('/')
 def index():
     return render_template('index.html')
 
@@ -27,6 +27,27 @@ def index2():
 def index3():
     return render_template('index3.html')
 
+
+@app.route("/inicio2")
+def inicio2():
+    return render_template("inicio2.html")
+
+@app.route("/acerca")
+def acerca():
+    return render_template("acerca.html")
+
+@app.route("/contacto")
+def contacto():
+    return render_template("contacto.html")
+
+
+
 if __name__ == '__main__':
     # Ejecutamos el servidor en modo debug
     app.run(debug=True)
+
+
+
+
+
+
