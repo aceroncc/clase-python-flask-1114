@@ -15,7 +15,7 @@ def inicio():
                            usuario=nombre_usuario,
                            temas=temas_vistos)
 
-@app.route('/index')
+@app.route('/   ')
 def index():
     return render_template('index.html')
 
