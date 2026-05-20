@@ -41,6 +41,20 @@ def contacto():
     return render_template("contacto.html")
 
 
+# Ruta recursos
+@app.route("/recursos")
+def recursos():
+
+    recursos = [
+        "Entorno virtual",
+        "Rutas en Flask",
+        "Plantillas HTML",
+        "Variables con Jinja",
+        "Listas y bucles"
+    ]
+
+    return render_template("recursos.html", recursos=recursos)
+    
 
 if __name__ == '__main__':
     # Ejecutamos el servidor en modo debug

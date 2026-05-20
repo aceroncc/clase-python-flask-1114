@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Inicio</title>
+    <title>Recursos</title>
 </head>
 <body>
 
@@ -12,9 +12,13 @@
         <a href="/recursos">Recursos</a>
     </nav>
 
-    <h1>Pagina Principal</h1>
-    <h1>AYNARA SOFIA CERON CADENA 1114</h1>
-    <p>Bienvenido a mi mini portal en Flask.</p>
+    <h1>Recursos de clase</h1>
+
+    <ul>
+        {% for recurso in recursos %}
+            <li>{{ recurso }}</li>
+        {% endfor %}
+    </ul>
 
 </body>
 </html>
